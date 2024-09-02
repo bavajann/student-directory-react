@@ -1,0 +1,290 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+.sidespace {
+    padding: 20px 20px 20px 90px;
+    border: 1px solid blue;
+    border-radius: 25px;
+    background-color: #9a8afd;
+    margin: 5px;
+}
+
+.header {
+    margin-bottom: 0px;
+}
+
+.content {
+    background-color: #f4f4f9;
+    padding: 20px;
+    border-radius: 0px 0px 8px 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.table-container {
+    margin-top: 20px;
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #ffffff; /* White background for the table */
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+    border-bottom: 1px solid #ddd; /* Light gray border for a softer look */
+}
+
+th {
+    background-color: #f5f5f5; /* Light gray background for header */
+    color: #333;
+    font-weight: bold;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+    box-shadow: inset 0 -1px 0 #ddd; /* Light gray shadow for header separation */
+}
+
+td {
+    background-color: #ffffff; /* White background for table cells */
+    color: #333; /* Dark text color for contrast */
+    border-left: 1px solid #ddd;
+    border-right: 1px solid #ddd;
+}
+
+tr {
+    border-bottom: 1px solid #ddd; /* Light gray border for rows */
+}
+
+tr:hover td {
+    background: linear-gradient(135deg, rgba(100, 200, 255, 0.3), rgba(255, 255, 255, 0.5));
+    transform: scale(1.02);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    color: #000; /* Darker text color on hover for better visibility */
+}
+
+/* Checkbox Styling */
+input[type="checkbox"] {
+    accent-color: #007bff; /* Adjust accent color for checkboxes */
+    cursor: pointer;
+}
+
+/* Selected Row Styling */
+.bg-indigo-200 {
+    background-color: rgba(0, 123, 255, 0.1) !important; /* Soft blue background for selected rows */
+}
+
+.buttonright {
+    background-color: #afa3fc;
+    color: white;
+    padding: 7px 36px;
+    border-radius: 126px;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.4s ease, box-shadow 0.4s ease;
+    box-shadow: 0 3.5px 7px rgba(0, 0, 0, 0.2);
+    font-size: 24px;
+    font-weight: 500;
+    animation: textColorChange 3s infinite;
+}
+
+@keyframes textColorChange {
+    0% {
+        color: white;
+    }
+    33% {
+        color: #035e96;
+    }
+    66% {
+        color: #050100;
+    }
+    100% {
+        color: white;
+    }
+}
+
+.buttonright:hover {
+    background-color: #afa3fc;
+    transform: translateY(-10px) scale(1.10) rotate(-3deg);
+    box-shadow: 0 18px 36px rgba(0, 0, 0, 0.4);
+}
+
+.buttonright:active {
+    transform: translateY(0) scale(0.95);
+    background-color: #3e8e41;
+    box-shadow: 0 3.5px 7px rgba(0, 0, 0, 0.2);
+}
+
+.container {
+    display: flex;
+    justify-content: space-between; /* This will push the third item to the right */
+    align-items: center; /* Aligns items to the top of the container */
+    height: 100px; /* Adjust the height as needed */
+}
+
+.itemone {
+    display: flex;
+    flex-direction: column;
+}
+
+.item1 {
+    margin-bottom: 10px;
+}
+
+select {
+    width: 200px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    color: #333;
+    cursor: pointer;
+}
+
+select::after {
+    content: '▼';
+    font-size: 12px;
+    color: #333;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+select:hover {
+    border-color: #888;
+}
+
+.filter-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    color: #333;
+    font-size: 16px;
+}
+
+.pagination-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 20px;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    flex-grow: 1;
+    margin-left: 17%; /* Allow to grow and fill available space */
+}
+
+.pagination.right {
+    display: flex;
+    justify-content: flex-end; /* Align items to the end of the container */
+}
+
+.pagination button {
+    background-color: #a5a1fa;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    margin: 0 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.pagination button:disabled {
+    background-color: #d3d3d3;
+    cursor: not-allowed;
+}
+
+.pagination span {
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0 10px;
+}
+
+.pagination button:hover:not(:disabled) {
+    background-color: #9ea5f9;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .sidespace {
+        padding: 10px;
+        margin: 0;
+        border-radius: 10px;
+    }
+
+    .header {
+        padding: 10px 0;
+    }
+
+    .container {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .itemone {
+        margin-bottom: 10px;
+    }
+
+    .buttonright {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+
+    select {
+        width: 100%;
+        font-size: 14px;
+    }
+
+    .pagination-wrapper {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .center {
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+
+    .pagination.right {
+        margin-top: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .buttonright {
+        padding: 8px 16px;
+        font-size: 16px;
+    }
+
+    select {
+        width: 100%;
+        font-size: 12px;
+    }
+
+    .container {
+        padding: 0 10px;
+    }
+}

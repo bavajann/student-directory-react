@@ -1,0 +1,94 @@
+.content {
+    position: relative;
+    z-index: 1;
+    color: white;
+  }
+  
+  header {
+    background: linear-gradient(90deg, #ffffff, #f0f0f0);
+    background-size: 200% 200%;
+    animation: gradientAnimation 8s ease infinite;
+    padding: 20px;
+    border-radius: 20px 20px 0px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.1); 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+  }
+  
+   
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  
+  .logo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    background-image: url('./images/profile-pic (2).png'), radial-gradient(circle at bottom right, #000000, #000205);
+    background-origin: border-box;
+    background-clip: content-box, border-box;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 24px;
+  }
+  
+  .ajustment {
+    display: flex;
+    flex-grow: 1;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .input-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px 0;
+  }
+  
+  input[type="text"] {
+    padding: 10px 15px;
+    border-radius: 25px;
+    border: 1px solid #1193ef71;
+    width: 100%;
+    max-width: 400px;
+    height: 35px;
+    font-size: 16px;
+    transition: all 0.3s ease;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+  }
+  
+  input[type="text"]:focus {
+    border-color: #3498db;
+    box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
+    background-color: #fff;
+    border-width: 2px;
+  }
+  
+  input[type="text"]::placeholder {
+    color: #aaa;
+    font-style: italic;
+  }
+  
+  .studentsbutton {
+    border-radius: 20px;
+    padding: 5px;
+    margin-left: 10px;
+  }
