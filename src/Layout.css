@@ -75,6 +75,11 @@
     background-color: #f9f9f9;
   }
   
+  @media screen and (max-width:500px) {
+    input[type="text"] {
+      max-width: 350px;
+    }
+  }
   input[type="text"]:focus {
     border-color: #3498db;
     box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
