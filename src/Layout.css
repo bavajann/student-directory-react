@@ -66,7 +66,7 @@
     border-radius: 25px;
     border: 1px solid #1193ef71;
     width: 100%;
-    max-width: 200px;
+    max-width: 400px;
     height: 30px;
     font-size: 16px;
     transition: all 0.3s ease;
@@ -78,12 +78,24 @@
   @media screen and (min-width:300px) and (max-width: 550px) {
     input[type="text"] {
       max-width: 200px;
-      width: 50%;
-      height: 30px;
+      width: 46%;
+      height: 25px;
+      border-radius: 30px;
     }
     .logo {
-      width: 80px;
-      height: 70px; 
+      width: 100px;
+      height: 50px;
+      border-radius: 50%;
+      border: 2px solid transparent;
+      background-image: url('./images/profile-pic (2).png'), radial-gradient(circle at bottom right, #000000, #000205);
+      background-origin: border-box;
+      background-clip: content-box, border-box;
+      background-size: cover;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: white;
+      font-size: 24px;
     }
   }
   
