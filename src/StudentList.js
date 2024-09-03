@@ -118,27 +118,26 @@ const StudentList = () => {
                             </tr>
                         </thead>
                         <tbody>
-                            {currentStudents.map((student, index) => (
-                                <tr
-                                    key={student.id}
-                                    className={`border-b hover:bg-indigo-100 cursor-pointer ${selectedStudents.includes(student.id) ? 'bg-indigo-200' : ''}`}
-                                >
-                                    <td className="py-3 px-6">
-                                        <input
-                                            type="checkbox"
-                                            checked={selectedStudents.includes(student.id)}
-                                            onChange={() => handleCheckboxChange(student.id)}
-                                        />
-                                    </td>
-                                    <td className="py-3 px-6">{indexOfFirstStudent + index + 1}</td>
-                                    <td className="py-3 px-6">{student.id}</td>
-                                    <td className="py-3 px-6">{student.attributes.firstName || 'N/A'}</td>
-                                    <td className="py-3 px-6">{student.attributes.lastName || 'N/A'}</td>
-                                    <td className="py-3 px-6">{student.attributes.parentContactNo || 'N/A'}</td>
-                                    <td className="py-3 px-6">{student.attributes.parentEmailId || 'N/A'}</td>
-                                </tr>
-                            ))}
-                        </tbody>
+    {currentStudents.map((student, index) => (
+        <tr key={student.id}>
+            <td data-label="Select">
+                <input
+                    type="checkbox"
+                    checked={selectedStudents.includes(student.id)}
+                    onChange={() => handleCheckboxChange(student.id)}
+                />
+            </td>
+            <td data-label="S.NO">{indexOfFirstStudent + index + 1}</td>
+            <td data-label="ID">{student.id}</td>
+            <td data-label="First Name">{student.attributes.firstName || 'N/A'}</td>
+            <td data-label="Last Name">{student.attributes.lastName || 'N/A'}</td>
+            <td data-label="Phone Number">{student.attributes.parentContactNo || 'N/A'}</td>
+            <td data-label="Email">{student.attributes.parentEmailId || 'N/A'}</td>
+        </tr>
+    ))}
+</tbody>
+
+
                     </table>
                 </div>
                 <div className="pagination-wrapper ">
