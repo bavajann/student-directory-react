@@ -66,8 +66,8 @@
     border-radius: 25px;
     border: 1px solid #1193ef71;
     width: 100%;
-    max-width: 400px;
-    height: 35px;
+    max-width: 200px;
+    height: 30px;
     font-size: 16px;
     transition: all 0.3s ease;
     outline: none;
@@ -75,17 +75,18 @@
     background-color: #f9f9f9;
   }
   
-  @media screen and (max-width:500px) {
+  @media screen and (min-width:300px) and (max-width: 550px) {
     input[type="text"] {
-      max-width: 350px;
+      max-width: 200px;
       width: 50%;
-      height: 25px;
+      height: 30px;
     }
     .logo {
-      width: 89px;
-    height: 70px;
+      width: 80px;
+      height: 70px; 
     }
   }
+  
   input[type="text"]:focus {
     border-color: #3498db;
     box-shadow: 0 0 10px rgba(52, 152, 219, 0.5);
